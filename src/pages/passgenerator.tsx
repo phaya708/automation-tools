@@ -31,7 +31,7 @@ export default function Home() {
         .split("\n") // 改行で区切る
         .map((row) => {
           const randomString = Math.random().toString(36).substring(2, 12); // ランダムな英数字10文字を生成
-          return row + "," + randomString; // 行の末尾にランダムな英数字10文字を追加
+          return row.slice(0, -1) + "," + randomString; // 行の末尾にランダムな英数字10文字を追加
         })
         .join("\n"); // 改行で連結
 
